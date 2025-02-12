@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Surprise</title>
+    <style>
+        body {
+            text-align: center;
+            background: pink;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            color: red;
+        }
+        .heart {
+            font-size: 100px;
+            color: red;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #yes {
+            background: green;
+            color: white;
+        }
+        #no {
+            background: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Will You Be My Valentine? ❤️</h1>
+        <div class="heart">❤️</div>
+        <button class="btn" id="yes">Yes</button>
+        <button class="btn" id="no">No</button>
+        <p id="response"></p>
+    </div>
+    <script>
+        document.getElementById("yes").addEventListener("click", function() {
+            document.getElementById("response").innerText = "Yay! You made my day! 💖";
+        });
+        document.getElementById("no").addEventListener("mouseover", function() {
+            this.style.position = "absolute";
+            this.style.top = Math.random() * window.innerHeight + "px";
+            this.style.left = Math.random() * window.innerWidth + "px";
+        });
+    </script>
+</body>
+</html>
